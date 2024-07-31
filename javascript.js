@@ -164,84 +164,125 @@
 
 // 8.Array destructuring
 
-const obj1={
-    name:'kishore',
-    age:20,
-    city:'madurai'
-}
+// const obj1={
+//     name:'kishore',
+//     age:20,
+//     city:'madurai'
+// }
 
-const obj2={name,age,city}=obj1;
-console.log("ARRAY DESTRUCTURING OUTPUT :");
-console.log(name);
-console.log(age);
-console.log(city);
+// const obj2={name,age,city}=obj1;
+// console.log("ARRAY DESTRUCTURING OUTPUT :");
+// console.log(name);
+// console.log(age);
+// console.log(city);
 
 
-// 9.Array Spreading
+// // 9.Array Spreading
 
-const arr1=[1,2,3,4,5];
-const arr2=[6,7,8,9,0];
-const comb=[...arr1,...arr2];
-console.log("ARRAY SPREADING OUTPUT :");
-console.log(comb);
+// const arr1=[1,2,3,4,5];
+// const arr2=[6,7,8,9,0];
+// const comb=[...arr1,...arr2];
+// console.log("ARRAY SPREADING OUTPUT :");
+// console.log(comb);
 
-// 12.checking array elements
+// // 12.checking array elements
 
-let check=[1,2,3,4,5,6,7];
-let flag=0;
-for(let i=0;i<check.length;i++)
-{
-    if(check[i]==6){
-        flag=1;
-        break;
-    }
-}
-console.log("CHECKING ARRAY ELEMENT : ");
-if(flag==1){
-    console.log("it is presented in array");
-}
-else{
-    console.log("it is not presented in array");
-}
+// let check=[1,2,3,4,5,6,7];
+// let flag=0;
+// for(let i=0;i<check.length;i++)
+// {
+//     if(check[i]==6){
+//         flag=1;
+//         break;
+//     }
+// }
+// console.log("CHECKING ARRAY ELEMENT : ");
+// if(flag==1){
+//     console.log("it is presented in array");
+// }
+// else{
+//     console.log("it is not presented in array");
+// }
 
-// 29.Removing items of array by index
+// // 29.Removing items of array by index
 
-let arr3=[1,2,3,4,5,6];
-function del(pos){
-    for(let i=pos+1;i<arr3.length;i++){
-        arr3[i-1]=arr3[i];
-    }
-    arr3.pop();
-    console.log("Removing items of array by index");
-    console.log(arr3);
-}
-del(3);
+// let arr3=[1,2,3,4,5,6];
+// function del(pos){
+//     for(let i=pos+1;i<arr3.length;i++){
+//         arr3[i-1]=arr3[i];
+//     }
+//     arr3.pop();
+//     console.log("Removing items of array by index");
+//     console.log(arr3);
+// }
+// del(3);
 
-// 32.Finding the longest string
+// // 32.Finding the longest string
 
-function lon(str)
-{
-    let word=str.split(" ");
-    let max=0,lar,i;
-    for(i=0;i<word.length;i++)
-    {
-        if(word[i].length>max)
-        {
-            max=word[i].length;
-        }
-    }
-    for( i=0;i<word.length;i++)
-    {
-        if(word[i].length==max)
-        {
-                lar=word[i];
-        }
-    }
-    return lar;
-}
-console.log("LONGEST WORD");
-console.log(lon("I am a football player"));
+// function lon(str)
+// {
+//     let word=str.split(" ");
+//     let max=0,lar,i;
+//     for(i=0;i<word.length;i++)
+//     {
+//         if(word[i].length>max)
+//         {
+//             max=word[i].length;
+//         }
+//     }
+//     for( i=0;i<word.length;i++)
+//     {
+//         if(word[i].length==max)
+//         {
+//                 lar=word[i];
+//         }
+//     }
+//     return lar;
+// }
+// console.log("LONGEST WORD");
+// console.log(lon("I am a football player"));
 
+// 21.array intersection of two sets
+let set1 = new Set([1, 2, 3, 4]);
+let set2 = new Set([3, 4, 5, 6]);
+let intersection = [...set1].filter(x => set2.has(x));
+console.log("Array Intersection : ")
+console.log(intersection);
+
+// 27.Comparing two arrays of equality
+
+let arr1 = [1, 2, 3, 4];
+let arr2 = [1, 2, 3, 4];
+let arr3 = [1, 2, 3, 5];
+console.log("Array Equality : ")
+console.log(arr1 == arr2);
+console.log(arr1 == arr3);
+
+// 30.inserting items at specific position
+let arr = [1, 2, 3, 4, 5];
+let index = 3;
+let item = 10;
+console.log("Array before insertion : ")
+console.log(arr);
+console.log("Array after insertion : ")
+arr.splice(index, 0, item);
+console.log(arr);
+
+// 28.converting array of object
+let arr5 = [
+    { id: 1, name: "John" },
+    { id: 2, name: "Jane" },
+    { id: 3, name: "Jim" }
+    ];
+    console.log("Array of Object : ")
+    console.log(arr5);
+    
+    
+// 19.finding the difference between two arrays
+let arr6 = [1, 2, 3, 4, 5];
+let arr7 = [4, 5, 6, 7, 8];
+console.log("Array Difference : ")
+console.log([...new Set(arr6)].filter(x => !arr7.includes(x))); 
 
 
 
